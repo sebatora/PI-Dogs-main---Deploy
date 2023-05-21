@@ -1,0 +1,83 @@
+.formContainer{
+  display: block;
+  margin: 1rem auto;
+  width: 40vw;
+  padding: 1%;
+  border-radius: 15px;
+  border: 2px solid var(--color-3);
+  text-align: center;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-2);
+  color: var(--color-1);
+}
+
+@media (max-width: 450px) {
+  .formContainer{
+    width: 75vw;
+  }
+}
+
+.formContainer h2{
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.formData label{
+  font-weight: bold;
+}
+
+.formData , .formData span, .formData input{
+  display: block;
+}
+
+.formData {
+  width: 60%;
+  height: auto;
+  margin: 2% auto;
+}
+
+.formData input, textarea{
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: auto;
+  text-align: center;
+}
+
+.formData input:focus{
+  outline: 2px solid var(--color-5)
+}
+
+.formData ::placeholder{
+  color: #999;
+  text-align: center;
+  font-style: italic;
+}
+
+.formData span{
+  margin: 1%;
+}
+
+.error{
+  color: red;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formDataTemp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formTemperaments{
+  width: fit-content;
+  margin: 2%;
+}

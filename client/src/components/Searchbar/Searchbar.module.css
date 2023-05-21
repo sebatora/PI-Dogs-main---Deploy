@@ -1,0 +1,33 @@
+.searchContainer{
+  align-items: center;
+  justify-content: center;
+}
+
+.searchContainer button{
+  margin: 0;
+  padding: 1%;
+}
+
+.searchContainer img{
+  width: 20px;
+}
+
+.searchContainer input, textarea{
+  width: 75%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: auto;
+  text-align: center;
+}
+
+.searchContainer input:focus{
+  outline: 2px solid var(--color-5)
+}
+
+.searchContainer ::placeholder{
+  color: #999;
+  text-align: center;
+  font-style: italic;
+}

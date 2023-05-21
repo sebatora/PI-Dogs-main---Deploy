@@ -1,0 +1,82 @@
+.dogContainer{
+  height: fit-content;
+  border-radius: 10px;
+  margin: 1%;
+  text-align: center;
+  align-items: center;
+  box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+  width: 400px;
+  background-color: var(--color-2);
+  transition: 1s ease
+}
+
+.dogContainer:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+  }
+
+.dogContainer img{
+  width: 400px;
+  height: 250px;
+  border-radius: 0px;
+}
+
+.dogContainer h3, h4{
+  margin: 5px 0;
+  padding: 0;
+}
+
+.dogLink{
+  text-decoration: none;
+}
+
+.dogContainer h2, h3, h4{
+  color: var(--color-1);
+  text-transform: uppercase;
+}
+
+.dogName{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-2);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.dogName h2{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.dogDetail{
+  width: 100%;
+  background-color: var(--color-2);
+  margin: 0;
+  padding: 0;
+  height: 120px;
+  border-radius: 0 0 10px 10px;
+}
+
+.dogTemperaments{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  justify-content: center;
+  margin: auto;
+}
+
+.dogTemperaments div{
+  flex: 0 0 auto;
+  width: fit-content;
+  overflow-x: auto;
+  margin: 0.5%;
+  color: var(--color-1);
+}
