@@ -1,3 +1,4 @@
+import { averageWeight } from "../utils/averageWeight";
 import { parseWeight } from "../utils/parseWeight";
 import { CLEAN_DETAIL, FILTER_DOGS_BY_ORIGIN, FILTER_TEMPERAMENTS, GET_DOGS, GET_DOG_BY_ID, GET_DOG_BY_NAME, GET_TEMPERAMENTS, ORDER_ALPHABETIC, ORDER_WEIGHT, POST_DOG } from "./action-type";
 
@@ -101,19 +102,39 @@ const rootReducer = (state = initialState, {type, payload}) => {
       };
     };
 
+    // case ORDER_WEIGHT: {
+    //   const allDogsWeight = state.allDogsFilter;
+    //   const orderWeight = payload === true
+    //   ? allDogsWeight.sort((a,b) => {
+    //     if (parseInt(a.weight) > parseInt(b.weight)) return 1;
+    //     if (parseInt(a.weight) < parseInt(b.weight)) return -1;
+    //     return 0;
+    //     })
+    //   : allDogsWeight.sort((a,b) => {
+    //     if (parseInt(a.weight) < parseInt(b.weight)) return 1;
+    //     if (parseInt(a.weight) > parseInt(b.weight)) return -1;
+    //     return 0;
+    //   })
+    //   return {
+    //     ...state,
+    //     allDogs: orderWeight
+    //   };
+    // };
+
     case ORDER_WEIGHT: {
       const allDogsWeight = state.allDogsFilter;
-      const orderWeight = payload === true
-      ? allDogsWeight.sort((a,b) => {
-        if (parseInt(a.weight) > parseInt(b.weight)) return 1;
-        if (parseInt(a.weight) < parseInt(b.weight)) return -1;
-        return 0;
-        })
-      : allDogsWeight.sort((a,b) => {
-        if (parseInt(a.weight) < parseInt(b.weight)) return 1;
-        if (parseInt(a.weight) > parseInt(b.weight)) return -1;
-        return 0;
+      const orderWeight = payload === false
+      ? allDogsWeight.sort((a, b) => {
+        const averageA = averageWeight(a.weight);
+        const averageB = averageWeight(b.weight);
+        return averageA - averageB;
       })
+      : allDogsWeight.sort((a, b) => {
+        const averageA = averageWeight(a.weight);
+        const averageB = averageWeight(b.weight);
+        return averageB - averageA;
+      })
+
       return {
         ...state,
         allDogs: orderWeight

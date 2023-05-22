@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./Filters.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { filterByOrigin, filterByTemp, orderAlphabetic } from "../../redux/actions";
+import { filterByOrigin, filterByTemp, orderAlphabetic, orderWeight } from "../../redux/actions";
 import { Searchbar } from "../index";
 
 
@@ -50,7 +50,7 @@ function Filters({setCurrentPage}) {
   // const [auxAlphabetic, setAuxAlphabetic] = useState("")
 
   const handleOrderWeight = () => {
-    dispatch(orderAlphabetic(orderWeightState))
+    dispatch(orderWeight(orderWeightState))
     setCurrentPage(1)
     orderWeightState ? setOrderWeightState(false) : setOrderWeightState(true)
     // setAuxAlphabetic(`Ordenar ${order}`)

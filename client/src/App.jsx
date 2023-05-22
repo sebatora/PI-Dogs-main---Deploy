@@ -1,12 +1,9 @@
-//STYLES
 import './App.css'
-
-//COMPONENTS
 import { Landing, Home, Detail, Form, About, Exiting } from "./views"
 import { Navbar } from './components';
-
-//HOOKS
 import { Route, Routes, useLocation } from "react-router-dom";
+import axios from 'axios';
+axios.defaults.baseUrl = "http://localhost:3001"
 
 function App() {
 
