@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Dog, Filters, Pagination, Searchbar } from '../index';
+import { Dog, Filters, Pagination } from '../index';
 import style from "./Dogs.module.css"
 
 

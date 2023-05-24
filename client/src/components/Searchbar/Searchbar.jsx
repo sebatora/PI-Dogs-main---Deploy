@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import style from "./SearchBar.module.css"
+import style from "./Searchbar.module.css"
 import { useDispatch } from 'react-redux';
 import { getDogByName } from '../../redux/actions';
 
