@@ -3,7 +3,7 @@ import { Landing, Home, Detail, Form, About, Exiting } from "./views"
 import { Navbar } from './components';
 import { Route, Routes, useLocation } from "react-router-dom";
 import axios from 'axios';
-axios.defaults.baseURL = "https://pi-dogs-main-deploy-production.up.railway.app"
+axios.defaults.baseUrl = "http://localhost:3001"
 
 function App() {
 

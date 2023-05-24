@@ -7,7 +7,7 @@ const endpoint = "http://localhost:3001";
 export const getDogs = () => {  
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/dogs`)
+      const { data } = await axios.get(`${endpoint}/dogs`)
       return dispatch({ type: GET_DOGS, payload: data });
     }
     catch (error) {
@@ -20,7 +20,7 @@ export const getDogs = () => {
 export const getDogById = (id) => {  
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/dogs/${id}`)
+      const { data } = await axios.get(`${endpoint}/dogs/${id}`)
       return dispatch({ type: GET_DOG_BY_ID, payload: data });
     }
     catch (error) {
@@ -33,7 +33,7 @@ export const getDogById = (id) => {
 export const getDogByName = (name) => {  
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/dogs?name=${name}`)
+      const { data } = await axios.get(`${endpoint}/dogs?name=${name}`)
       return dispatch({ type: GET_DOG_BY_NAME, payload: data });
     }
     catch (error) {
@@ -51,7 +51,7 @@ export const cleanDetail = () => {
 export const getTemperaments = () => {  
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/temperaments`)
+      const { data } = await axios.get(`${endpoint}/temperaments`)
       return dispatch({ type: GET_TEMPERAMENTS, payload: data });
     }
     catch (error) {
@@ -64,7 +64,7 @@ export const getTemperaments = () => {
 export const postDog = (newDog) => {  
   return async (dispatch) => {
     try {
-      const { data } = await axios.post(`/dogs`, newDog)
+      const { data } = await axios.post(`${endpoint}/dogs`, newDog)
       return dispatch({ type: POST_DOG, payload: data });
     }
     catch (error) {
